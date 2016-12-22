@@ -1,0 +1,52 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "$": false
+  },
+  "rules": {
+    "quotes": [1, "single"],
+    "eol-last": 1,
+    "prefer-template": 1,
+    "comma-dangle": [1,"never"],
+    "no-cond-assign": [1,"always"],
+    "no-console": 1,
+    "no-constant-condition": 1,
+    "no-control-regex": 1,
+    "no-debugger": 1,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty-character-class": 1,
+    "no-empty": 1,
+    "no-ex-assign": 2,
+    "no-extra-boolean-cast": 1,
+    "no-extra-parens": [1,"functions"],
+    "no-extra-semi": 2,
+    "no-func-assign": 2,
+    "no-inner-declarations": [1,"both"],
+    "no-invalid-regexp": 2,
+    "no-irregular-whitespace": 2,
+    "no-negated-in-lhs": 1,
+    "no-obj-calls": 2,
+    "no-regex-spaces": 1,
+    "no-sparse-arrays": 1,
+    "no-unreachable": 2,
+      "use-isnan": 2,
+    "valid-jsdoc": 2,
+    "valid-typeof": 2,
+    "no-fallthrough": 1,
+    "no-octal": 1,
+    "no-redeclare": 2,
+    "no-delete-var": 1,
+    "no-undef": 1,
+    "no-unused-vars": 1,
+    "no-mixed-spaces-and-tabs": [1,"smart-tabs"]
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
