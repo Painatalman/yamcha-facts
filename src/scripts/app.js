@@ -42,7 +42,7 @@ function changeQuote() {
   }, '')
 
   // set the twitter href
-  twitterAnchor.href = 'https://twitter.com/intent/tweet?via=Mi_PiCo&hashtags=frasesdorante&url=https://painatalman.github.io/frasesdorante&text=' + quoteOrDialogAsTweet;
+  twitterAnchor.href = 'https://twitter.com/intent/tweet?via=Mi_PiCo&hashtags=yamcha-facts&url=https://painatalman.github.io/yamcha-facts&text=' + quoteOrDialogAsTweet;
 }
 
 function changeQuoteWithTransition() {
