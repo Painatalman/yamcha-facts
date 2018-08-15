@@ -1,25 +1,8 @@
-html,
-body {
-  position: relative;
-  padding: 0;
-  height : 100%;
-}
+@import '~bulma/css/bulma.css';
+@import '~animate.css';
 
-p {
-  margin: 4px 0;
-}
+@import 'base.css';
 
-.main-hero {
-  background-image: url('https://i.imgur.com/1iae7Mt.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.quote {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 96px;
-}
-
+@import 'blocks/main-hero.css';
+@import 'blocks/quote.css';
+@import 'blocks/twitter-icon-wrapper.css';
