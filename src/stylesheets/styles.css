@@ -23,3 +23,15 @@ p {
   min-height: 96px;
 }
 
+.twitter-icon-wrapper {
+  margin-top: 12px;
+}
+
+.twitter-icon-wrapper svg {
+  width: 24px;
+}
+
+.twitter-icon-wrapper * {
+  fill: #00d1b2;
+}
+
