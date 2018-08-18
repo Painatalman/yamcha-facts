@@ -3,6 +3,6 @@
 
 @import 'base.css';
 
-@import 'main-hero.css';
-@import 'quote.css';
-@import 'twitter-icon-wrapper.css';
+@import 'blocks/main-hero.css';
+@import 'blocks/quote.css';
+@import 'blocks/twitter-icon-wrapper.css';
