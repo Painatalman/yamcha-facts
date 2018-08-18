@@ -56,7 +56,13 @@ module.exports = env => {
           title: 'Yamcha Facts',
           description: 'Truths about the life of Dragon Ball\'s exact opposite of Chuck Norris',
           inject: false,
-          minify: true
+          minify: mode === 'production' ? {
+            minifyCSS: true,
+            minifyJS: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            collapseWhitespace: true
+          } : false
         }
       )
     ],
