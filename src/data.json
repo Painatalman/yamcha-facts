@@ -26,6 +26,7 @@
     "Pokémon is confused! Yamcha hurt himself in its confusion!",
     "Rabbits can pull Yamcha out of their hats",
     "There was a time when Yamcha tried to capture a Pokémon. He caught himself",
+    "Tomorrow never dies... unless it's Yamcha!",
     "Toriyama forgot about Lunch because he thought it was Yamcha",
     "Trash has to take out Yamcha once a week",
     "VOLTORB used SELFDESTRUCT! Only YAMCHA fainted!",
@@ -68,6 +69,7 @@
     "Yamcha lost a game of connect-1 even though he played first",
     "Yamcha lost a popularity contest... against $unpopular",
     "Yamcha lost his virginity after his son",
+    "Yamcha needs a GPS system to get to the bathroom... from his bedroom",
     "Yamcha ordered Coca-Cola Zero. He got regular Coke with his face on it",
     "Yamcha pays the internet bills so he can watch TV",
     "Yamcha retired at the age of 5",
@@ -77,6 +79,7 @@
     "Yamcha tried to use his name as a password on $socialnetwork: it was too weak",
     "Yamcha was found guilty of his own murder",
     "Yamcha was the only candidate for presidency. He lost",
+    "Yamcha watches tutorials on how to breathe... but he never managed to complete any of them",
     "Yamcha's birthday is february 31st",
     "Yamcha's body will never decompose. Not even maggots would eat that!",
     "Yamcha's favourite software is Windows Vista",
@@ -89,7 +92,9 @@
   "extras": {
     "unpopular": [
       "Internet Explorer",
-      "Roman Reigns",
+      "Activition",
+      "Donald Trump",
+      "Brexit",
       "EA"
     ],
     "socialnetwork": [
