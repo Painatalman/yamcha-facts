@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --env.NODE_ENV=development",
     "compile": "webpack --env.NODE_ENV=production",
-    "compile-dev": "webpack --env.NODE_ENV=development",
-    "push-to-gh-pages": "git subtree push --prefix dist origin gh-pages --force"
+    "compile-dev": "webpack --env.NODE_ENV=development"
   },
   "repository": {
     "type": "git",
