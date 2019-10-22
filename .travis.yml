@@ -9,4 +9,5 @@ after_success:
   - git config --global user.email "maiquedi@gmail.com"
   - git remote rm origin
   - git remote add origin https://Painatalman:${GH_TOKEN}@github.com/Painatalman/yamcha-facts
+  - git commit -a -m "deploy project"
   - npm run push-to-gh-pages
