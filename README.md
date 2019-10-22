@@ -1,4 +1,5 @@
 # Yamcha Facts
+[![Build Status](https://travis-ci.com/Painatalman/yamcha-facts.svg?branch=master)](https://travis-ci.com/Painatalman/yamcha-facts)
 
 Facts about the life of Dragon Ball's very own anti-Chuck Norris.
 
