@@ -4,6 +4,9 @@ node_js:
 stages:
   - compile
   - deploy
+branches:
+  only:
+  - master
 jobs:
   include:
     - stage: compile
