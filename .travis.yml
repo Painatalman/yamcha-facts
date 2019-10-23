@@ -6,7 +6,7 @@ branches:
   - master
 install: npm install
 script: npm run compile
-after-success:
+after_success:
   - git config --global user.name "Painatalman"
   - git config --global user.email "maiquedi@gmail.com"
   - git remote rm origin
