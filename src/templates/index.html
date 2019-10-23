@@ -26,14 +26,20 @@
         <div class="column is-two-thirds is-offset-2">
             <h2 class="title has-text-primary">Random Fact about Yamcha</h2>
             <div class="quote box">
-              <div id="quote" class="animated faster is-size-5">
+              <div id="quote" class="animated faster is-size-5" aria-live="polite">
 
               </div>
             </div>
             <div class="quote-controls has-text-centered">
               <button class="button is-primary is-uppercase" id="quotebutton">Get another fact</button>
               <br>
-              <a class="tag is-primary twitter-icon-wrapper" href='#' type="button" id="twitteranchor" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no');return false;">
+              <a 
+                 class="tag is-primary twitter-icon-wrapper" 
+                 href='#' type="button" 
+                 id="twitteranchor" 
+                 onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no');return false;"
+                 aria-label="Share quote on Twitter"
+              >
                 <%= require('@/svg/twitter.svg') %>
               </a>
             </div>
@@ -73,7 +79,7 @@
             </ul>
           </div>
           <div class="column is-4">
-            <h3 class="subtitle has-text-centered">Sources and Inspiration</h3>
+            <h2 class="subtitle has-text-centered">Sources and Inspiration</h2>
             <ul class="contribution-section__list">
               <li>
                 <a href="https://teamfourstar.com/">Team Four Star</a> - creators of Dragon Ball Z Abridged,
