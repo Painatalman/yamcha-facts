@@ -1,13 +1,19 @@
 language: node_js
 node_js:
   - 12.13.0
-before_script:
-  - npm install
-script: npm run compile
-after_success:
-  - git config --global user.name "Painatalman"
-  - git config --global user.email "maiquedi@gmail.com"
-  - git remote rm origin
-  - git remote add origin https://Painatalman:${GH_TOKEN}@github.com/Painatalman/yamcha-facts
-  - git commit -a -m "deploy project"
-  - git push origin `git subtree split --prefix dist`:gh-pages --force
+stages:
+  - compile
+  - deploy
+jobs:
+  include:
+    - stage: compile
+      before_script: npm install
+      script: npm run compile
+    - stage: deploy
+      script:
+        - git config --global user.name "Painatalman"
+        - git config --global user.email "maiquedi@gmail.com"
+        - git remote rm origin
+        - git remote add origin https://Painatalman:${GH_TOKEN}@github.com/Painatalman/yamcha-facts
+        - git commit -a -m "deploy project"
+        - git push origin `git subtree split --prefix dist`:gh-pages --force
