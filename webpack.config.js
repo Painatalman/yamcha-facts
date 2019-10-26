@@ -2,13 +2,14 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const distPath = path.resolve(__dirname, './dist')
+const srcPath = path.resolve(__dirname, './src')
 
 module.exports = env => {
   const mode = env.NODE_ENV
 
   return {
     mode,
-    entry: path.resolve(__dirname, './src/scripts/app.js'),
+    entry: path.resolve(__dirname, './src/scripts/app.ts'),
     output: {
       path: distPath,
       filename: '[name].js'
@@ -19,8 +20,13 @@ module.exports = env => {
     module: {
       rules: [
         {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          include: srcPath
+        },
+        {
           test: /\.js$/,
-          exclude: /node_modules/,
+          include: srcPath,
           use: {
             loader: 'babel-loader'
           }
@@ -68,9 +74,9 @@ module.exports = env => {
     ],
     resolve: {
       alias: {
-        // source base path
-        "@": path.resolve(__dirname, 'src'),
-      }
+        "@": srcPath,
+      },
+      extensions: ['.js','.ts','.json']
     }
   }
 }
