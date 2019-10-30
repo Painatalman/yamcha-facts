@@ -15,18 +15,24 @@ class QuoteController {
   _settings: QuoteControllerSettings
 
   constructor({
-    dao, factory, renderer
+    dao, factory, renderer, settings
   }: {
     dao: QuoteDAO,
     factory: QuoteFactory,
-    renderer: QuoteRenderer
+    renderer: QuoteRenderer,
+    settings?: Object
   }) {
+    const defaultSettings = {
+      nonNerdyOnly: false
+    }
+
     this._dao = dao
     this._factory = factory
     this._renderer = renderer
     this._lastQuoteId = undefined
     this._settings = {
-      nonNerdyOnly: false
+      ...defaultSettings,
+      ...(settings || {})
     }
   }
 
@@ -68,6 +74,15 @@ class QuoteController {
     await this._renderQuote(quote)
 
     return quote
+  }
+
+  async toggleNonNerdyOnly(nonNerdyOnly: boolean) {
+    if (nonNerdyOnly === this._settings.nonNerdyOnly) {
+      return Promise.resolve()
+    }
+
+    this._settings.nonNerdyOnly = nonNerdyOnly
+    return await this.update()
   }
 }
 

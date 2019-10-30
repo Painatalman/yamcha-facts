@@ -1,5 +1,6 @@
 import QuoteDTO from './QuoteDTO'
 
 export default interface QuoteController {
-  update: () => Promise<QuoteDTO>
+  update: () => Promise<QuoteDTO>,
+  toggleNonNerdyOnly: () => Promise<QuoteDTO|undefined>
 }
