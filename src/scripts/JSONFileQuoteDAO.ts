@@ -3,22 +3,28 @@ import getFirstIntNotIn from './utils/getFirstIntNotIn'
 
 import QuoteDAO from './interfaces/QuoteDAO'
 
-import QuoteExtraData from './types/QuoteExtraData'
+import QuoteDataExtra from './types/QuoteDataExtra'
 import QuoteDataCollection from './types/QuoteDataCollection'
 import id from './types/id';
 import QuoteDataParsed from './types/QuoteDataParsed'
 import QuoteData from './types/QuoteData';
 import QuoteDataParsedMinusId from './types/QuoteDataParsedMinusId';
+import validateQuoteDataParsedCollection from './validators/validateQuoteDataCollection'
 
 // a provider that has its own data stored locally, doesn't do API calls
 export default class JSONFileQuoteDAO implements QuoteDAO {
   _quoteDataList: QuoteDataParsed[]
-  _extras: QuoteExtraData
+  _extras: QuoteDataExtra
   _lastId: number|undefined
 
   constructor({ quotes, extras }: QuoteDataCollection) {
     this._quoteDataList = this._initQuoteData(quotes)
     this._extras = extras
+
+    validateQuoteDataParsedCollection({
+      quotes: this._quoteDataList,
+      extras: this._extras
+    })
   }
 
   _initQuoteData(quotes: QuoteData[]): QuoteDataParsed[] {
@@ -83,7 +89,7 @@ export default class JSONFileQuoteDAO implements QuoteDAO {
     const quote = this._getRandomItemFromList(list)
 
     if (!quote) {
-      return Promise.reject('No quotes available')
+      return Promise.reject(new Error('No quotes available'))
     }
 
     return Promise.resolve(quote)
@@ -115,8 +121,10 @@ export default class JSONFileQuoteDAO implements QuoteDAO {
 
   _getQuoteDataWithExtras(quoteData: QuoteDataParsed): QuoteDataParsed {
     const text = quoteData.text.replace(
-      /\$(\w+)/g,
-      (_match, capture: string) => this._getRandomExtra(capture)
+      /(^|\s+)\$([a-z]+)/g,
+      (_wholeMatch, spaceOrStart: string, extraName:string) => {
+        return `${spaceOrStart}${this._getRandomExtra(extraName)}`
+      }
     )
 
     return {
@@ -125,7 +133,16 @@ export default class JSONFileQuoteDAO implements QuoteDAO {
     }
   }
 
-  fetchRandomQuoteData(excludedId?) {
+  fetchQuoteData(id: id) {
+    const quote = this._quoteDataList.find(quoteData => quoteData.id == id)
+
+    if (!quote) {
+      return Promise.reject(new Error(`No quote matching id ${id}`))
+    }
+    return Promise.resolve(this._getQuoteDataWithExtras(quote))
+  }
+
+  fetchRandomQuoteData(excludedId?: id) {
     const list = this._quoteDataList.filter(quoteData => quoteData.id !== excludedId)
 
     return this._getRandomFilteredQuoteData(list)
@@ -140,7 +157,11 @@ export default class JSONFileQuoteDAO implements QuoteDAO {
     const quote = this._getRandomItemFromList(list)
 
     if (!quote) {
-      return Promise.reject("no quote")
+      return Promise.reject(
+        new Error(
+          'No non-nerdy quotes. They\'re either all nerdy, or there\'s no quotes at all'
+        )
+      )
     }
 
     return Promise.resolve(quote)

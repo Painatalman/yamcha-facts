@@ -10,9 +10,18 @@
       "isNerdy": false
     },
     "A man once said: 'If you ain't first, you're Yamcha!'",
-    "A wild ENTEI appeared! Yamcha fled!",
-    "Abra used Teleport! Yamcha fainted!",
-    "Actually, Yamcha knows Instant Transmission. He can send his life to nowhere in an instant",
+    {
+      "text": "A wild $fleeingpokemon appeared! Yamcha fled!",
+      "isNerdy": true
+    },
+    {
+      "text": "Abra used Teleport! Yamcha fainted!",
+      "isNerdy": true
+    },
+    {
+      "text": "Actually, Yamcha knows Instant Transmission. He can send his life to nowhere in an instant",
+      "isNerdy": true
+    },
     "All men are created equal... except Yamcha, he sucks!",
     "An old lady helped Yamcha cross the street",
     "Any person who finishes last still gets ahead of Yamcha",
@@ -29,9 +38,18 @@
     "If Yamcha gets robbed, he has to go to jail",
     "If you commit a foul against Yamcha, your team can score a penalty",
     "In fighting games, 'training mode' is commonly known as 'Yamcha'",
-    "In My Hero Academia, Yamcha's quirk is 'None for You'",
-    "In Ultra Instinct, Yamcha can defeat TWO Saibamen",
-    "Jobbers usually perform their finishing move on Yamcha. Six times",
+    {
+      "text": "In My Hero Academia, Yamcha's quirk is 'None for You'",
+      "isNerdy": true
+    },
+    {
+      "text": "In Ultra Instinct, Yamcha can defeat TWO Saibamen",
+      "isNerdy": true
+    },
+    {
+      "text": "Jobbers usually perform their finishing move on Yamcha. Six times",
+      "isNerdy": true
+    },
     "Life's got a restraining order on Yamcha",
     "Lightning never strikes twice... unless it's Yamcha",
     {
@@ -41,7 +59,7 @@
     "Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker",
     "Murphy's Law was originally planned to be Yamcha's Law, but Yamcha lost a vote by a count of zero",
     "Negative numbers go from 0 to Yamcha",
-    "Neither Cell or Buu would ever risk absorbing Yamcha. They'd become weaker",
+    "Neither Cell nor Buu would ever risk absorbing Yamcha. They'd become weaker",
     "On the streets, it's common for dogs to step on Yamcha",
     "On a clown's birthday, Yamcha is usually hired to be made fun of",
     "Pokémon is confused! Yamcha hurt himself in its confusion!",
@@ -52,7 +70,10 @@
     "Toriyama drew Yamcha with just toilet paper and his bottom... while taking a dump",
     "Toriyama forgot about Lunch because he thought it was Yamcha",
     "Trash has to take out Yamcha once a week",
-    "VOLTORB used SELFDESTRUCT! Only YAMCHA fainted!",
+    {
+      "text": "VOLTORB used SELFDESTRUCT! Only YAMCHA fainted!",
+      "isNerdy": true
+    },
     "When a ghost dies, it becomes Yamcha",
     "When kids misbehave in school, they have to sit in a corner and look at Yamcha",
     "When Yamcha died, HELL was renamed Home For Infinite Losers (HFIL for short)",
@@ -99,12 +120,17 @@
     "Yamcha dies more than anyone's internet connection",
     "Yamcha failed his driver's test to ride a shopping cart",
     "Yamcha finished a time trial once. His time was infinity",
-    "Yamcha gets booed by Roman Reigns",
     "Yamcha gets sunburned at night",
     "Yamcha got a speeding ticket for standing still",
     "Yamcha got fired for being unemployed",
-    "Yamcha is 2x weak against Normal",
-    "Yamcha is allergic to Senzu beans",
+    {
+      "text": "Yamcha is 2x weak against Normal",
+      "isNerdy": true
+    },
+    {
+      "text":"Yamcha is allergic to Senzu beans",
+      "isNerdy": true
+    },
     "Yamcha likes pineapple on a pizza",
     "Yamcha lost a game of connect-1 even though he played first",
     "Yamcha lost a popularity contest... against $unpopular",
@@ -113,39 +139,62 @@
     "Yamcha ordered Coca-Cola Zero. He got regular Coke with his face on it",
     "Yamcha pays the internet bills so he can watch TV",
     "Yamcha retired at the age of 5",
-    "Yamcha saw The Ring. He couldn't even last a day, let alone a week...",
-    "Yamcha stopped walking at the age of 1",
+    {
+      "text":"Yamcha saw The Ring. He couldn't even last a day, let alone a week...",
+      "isNerdy": true
+    },
+    "Yamcha stopped walking at the age of 1... month",
     "Yamcha thinks wrestling is real",
     "Yamcha tried to use his name as a password on $socialnetwork: it was too weak",
     "Yamcha was found guilty of his own murder",
     "Yamcha was the only candidate for presidency. He lost",
     "Yamcha watches tutorials on how to breathe... but he never managed to complete any of them",
-    "Yamcha will eventually join Smash Bros., but only after Waluigi joins the battle!",
+    {
+      "text": "Yamcha will eventually join Smash Bros., but only after Waluigi joins the battle!",
+      "isNerdy": true
+    },
     "Yamcha's biography is also a drama, and not a good one!",
     "Yamcha's birthday is february 31st",
     "Yamcha's body will never decompose. Not even maggots would eat that!",
     "Yamcha's favourite car is the Fiat Multipla... actually, it was his idea!",
     "Yamcha's favourite software is Windows Vista",
     "Yamcha's favourite Star Wars character is Jar Jar Binks",
-    "Yamcha's Master balls always fail",
+    {
+      "text": "Yamcha's Master balls always fail",
+      "isNerdy": true
+    },
     "Yamcha's name is actually an acronym... for 'whY AM i suCH A loser'?",
     "Yamcha's name means loser... in all languages",
     {
-      "text": "Yamcha's power level is below NEGATIVE NINE THOU-SAAAAAAAAND!",
+      "text": "Yamcha's power level is below NEGATIVE NINE THOUSAAAAAAAAND!",
       "isNerdy": true
     },
-    "Yamcha's version of Ultra Instinct makes him get hit by every punch without thinking about it",
-    "You can't tell Yamcha to 'have a blast'. He'd take it too literally"
+    {
+      "text": "Yamcha's version of Ultra Instinct makes him get hit by every punch without thinking about it",
+      "isNerdy": true
+    },
+    "You can't tell Yamcha to 'have a blast'. He'd take it too literally",
+    {
+      "text": "\"You're already dead\". Yamcha died even before Kenshiro could finish saying that",
+      "isNerdy": true
+    }
   ],
   "extras": {
     "unpopular": [
-      "Activition",
+      "Activision",
+      "Adam Sandler",
       "Donald Trump",
       "Brexit",
       "EA",
       "Fiat Multipla",
       "Internet Explorer",
-      "Jar Jar Binks"
+      "Jar Jar Binks",
+      "Loot Boxes"
+    ],
+    "fleeingpokemon": [
+      "ENTEI",
+      "RAIKOU",
+      "SUICUNE"
     ],
     "socialnetwork": [
       "Facebook",

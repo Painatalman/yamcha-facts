@@ -1,8 +1,8 @@
-import QuoteData from "./QuoteData"
+import QuoteDataParsed from "./QuoteDataParsed"
 import QuoteDataExtra from "./QuoteDataExtra";
 
 type QuoteDataCollection = {
-  quotes: QuoteData[]
+  quotes: QuoteDataParsed[]
   extras: QuoteDataExtra
 }
 

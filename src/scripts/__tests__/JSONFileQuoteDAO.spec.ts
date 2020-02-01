@@ -2,6 +2,8 @@ import QuoteDataCollection from "../types/QuoteDataCollection"
 import JSONFileQuoteDAO from "../JSONFileQuoteDAO"
 import * as getRandomInt from '../utils/getRandomInt'
 
+// TODO: create a test to check if data is being validated or not on initialization
+
 describe('Raw quote provider', () => {
   it('should provide the same quotes and extras as those in the source', () => {
     const data: QuoteDataCollection = {
@@ -56,32 +58,6 @@ describe('Raw quote provider', () => {
     )
     expect(Object.keys(data.extras)).toEqual(['unpopular', 'socialnetwork'])
   })
-
-  it('should not allow data with duplicate IDs', () => {
-    const data: QuoteDataCollection = {
-      quotes: [
-        {
-          "text": "Yamcha's Master balls always fail",
-          "id": '2'
-        },
-        {
-          "text": "Yamcha's Master balls never fail",
-          "id": '2'
-        }
-      ],
-      extras: {}
-    }
-
-    expect(
-      () => new JSONFileQuoteDAO(data)
-    ).toThrowError('Data has duplicate IDs')
-  })
-
-  it('should throw when data doesn\'t have data on an extra required by any quote',
-    () => {
-      throw ('Not implemented error')
-    }
-  )
 
   describe('fetch random quote data', () => {
     it(
@@ -293,13 +269,63 @@ describe('Raw quote provider', () => {
          })  
       }
     )
+
+    it(
+      'should throw when no quote is available',
+      async () => {
+        let data: QuoteDataCollection
+        let provider:JSONFileQuoteDAO
+        
+        data = {
+          "quotes": [],
+          "extras": {}
+        }
+        provider = new JSONFileQuoteDAO(data)
+
+        try {
+          await provider.fetchRandomQuoteData()
+        } catch (e) {
+          expect(e.message).toBe('No quotes available')
+        }
+
+        data = {
+          "quotes": [{
+            text: "Can't catch me",
+            id: '1'
+          }],
+          "extras": {}
+        }
+        provider = new JSONFileQuoteDAO(data)
+
+        try {
+          await provider.fetchRandomQuoteData('1')
+        } catch (e) {
+          expect(e.message).toBe('No quotes available')
+        }
+      }
+    )
   })
 
   describe('fetch random nerdy quote data', () => {
     it(
-      'should not provide a quote if there\'s only nerdy quotes',
+      'should throw if there\'s no non-nerdy quotes',
       async () => {
-        const data: QuoteDataCollection = {
+        let data: QuoteDataCollection
+        let provider:JSONFileQuoteDAO
+
+        data = {
+          "quotes": [],
+          "extras": {}
+        }
+        provider = new JSONFileQuoteDAO(data)
+
+        try {
+          await provider.fetchRandomNonNerdyQuoteData()
+        } catch (e) {
+          expect(e.message).toBe('No non-nerdy quotes. They\'re either all nerdy, or there\'s no quotes at all')
+        }
+
+        data = {
           "quotes": [
             {
               text: "Yamcha lost",
@@ -314,10 +340,13 @@ describe('Raw quote provider', () => {
           ],
           "extras": {}
         }
-        const provider = new JSONFileQuoteDAO(data)
-        const quote = await provider.fetchRandomNonNerdyQuoteData()
-
-        expect(quote).toThrow('no quote')
+        provider = new JSONFileQuoteDAO(data)
+        
+        try {
+          await provider.fetchRandomNonNerdyQuoteData()
+        } catch (e) {
+          expect(e.message).toBe('No non-nerdy quotes. They\'re either all nerdy, or there\'s no quotes at all')
+        }
       }
     )
 
@@ -360,6 +389,78 @@ describe('Raw quote provider', () => {
           id: '2',
           isNerdy: false
         })
+      }
+    )
+  })
+
+  describe('fetch by id', () => {
+    it(
+      'should return data matching a provided id',
+      async () => {
+        const data: QuoteDataCollection = {
+          "quotes": [
+            {
+              text: "Yamcha won",
+              id: '0',
+              isNerdy: true
+            },
+            {
+              text: "Yamcha lost",
+              id: '1',
+              isNerdy: true
+            }
+          ],
+          "extras": {}
+        }
+        const provider = new JSONFileQuoteDAO(data)
+        const quoteData = await provider.fetchQuoteData('1')
+
+        expect(quoteData).toEqual({
+          text: "Yamcha lost",
+          id: '1',
+          isNerdy: true
+        })
+      }
+    )
+
+    it(
+      'should signal when there\'s no quote matching the requested id',
+      async () => {
+        let data: QuoteDataCollection
+        let provider:JSONFileQuoteDAO
+
+        data = {
+          "quotes": [],
+          "extras": {}
+        }
+        provider = new JSONFileQuoteDAO(data)
+        try {
+          await provider.fetchQuoteData('2')
+        } catch (e) {
+          expect(e.message).toEqual('No quote matching id 2')
+        }
+
+        data = {
+          "quotes": [
+            {
+              text: "Yamcha won",
+              id: '0',
+              isNerdy: true
+            },
+            {
+              text: "Yamcha lost",
+              id: '1',
+              isNerdy: true
+            }
+          ],
+          "extras": {}
+        }
+        provider = new JSONFileQuoteDAO(data)
+        try {
+          await provider.fetchQuoteData('2')
+        } catch(e) {
+          expect(e.message).toEqual('No quote matching id 2')
+        }
       }
     )
   })

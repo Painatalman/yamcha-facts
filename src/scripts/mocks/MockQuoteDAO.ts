@@ -18,4 +18,12 @@ export default class MockQuoteDAO implements QuoteDAO {
       "id": "2"
     })
   }
+
+  async fetchQuoteData(_id:id) {
+    return await Promise.resolve({
+      "text": "A dinosaur can't teach Yamcha how to ride a ball",
+      "isNerdy": true,
+      "id": "1"
+    })
+  }
 }

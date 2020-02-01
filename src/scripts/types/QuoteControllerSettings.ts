@@ -1,5 +1,6 @@
 type QuoteControllerSettings =  {
-  nonNerdyOnly: boolean
+  nonNerdyOnly: boolean,
+  playSound: boolean
 }
 
 export default QuoteControllerSettings

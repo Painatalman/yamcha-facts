@@ -1,0 +1,1 @@
+export default <T>(someArray: Array<T>): Array<T> => [...new Set(someArray)] 

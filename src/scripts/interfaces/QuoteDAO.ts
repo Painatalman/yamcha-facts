@@ -5,4 +5,5 @@ import id from '../types/id'
 export default interface QuoteDataProviderInterface {
   fetchRandomQuoteData: (excludedId?:id) => Promise<QuoteDataParsed>
   fetchRandomNonNerdyQuoteData: (excludedId?:id) => Promise<QuoteDataParsed>
+  fetchQuoteData: (id: id) => Promise<QuoteDataParsed>
 }

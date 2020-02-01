@@ -1,6 +1,6 @@
-import IQuote from "./interfaces/QuoteDTO";
+import QuoteDTOInterface from "./interfaces/QuoteDTO";
 
-export default class Quote implements IQuote {
+export default class QuoteDTO implements QuoteDTOInterface {
   private _text:string
   private _id:string
 
@@ -17,7 +17,7 @@ export default class Quote implements IQuote {
     return this._id
   }
 
-  equals(quote:IQuote) {
+  equals(quote:QuoteDTOInterface) {
     return quote.getId() === this._id
   }
 }

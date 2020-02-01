@@ -4,42 +4,42 @@ import QuoteController from './QuoteController'
 import JSONFileQuoteDAO from './JSONFileQuoteDAO'
 import YamchaQuoteRenderer from './yamchaQuoteRenderer'
 import QuoteDTO from './interfaces/QuoteDTO.js'
-
-const teleportSound:HTMLAudioElement = new Audio('https://www.myinstants.com/media/sounds/dbz-teleport.mp3')
+import validateCheckbox from './validators/validateCheckbox'
+import validateElement from './validators/validateElement'
+import validateAnchor from './validators/validateAnchor'
+import TeleportSoundPlayer from './TeleportSoundPlayer'
 
 const SELECTORS = {
   QUOTE_EL_ID: 'quote',
   QUOTE_CHANGE_TRIGGER_ID: 'quotebutton',
   TWITTER_SHARE_ID: 'twitteranchor',
-  NON_NERDY_CONTROL_ID: 'nonNerdyOnlyControl'
+  NON_NERDY_CONTROL_ID: 'nonNerdyOnlyControl',
+  SOUND_CONTROL_ID: 'soundControl'
 }
 const { TWITTER_SHARE_ID, QUOTE_EL_ID, QUOTE_CHANGE_TRIGGER_ID, NON_NERDY_CONTROL_ID } = SELECTORS
 
-const quoteEl:HTMLElement|null = document.getElementById(SELECTORS.QUOTE_EL_ID)
-const quoteChanger:HTMLElement|null = document.getElementById(SELECTORS.QUOTE_CHANGE_TRIGGER_ID)
-const twitterShare:HTMLElement|null = document.getElementById(SELECTORS.TWITTER_SHARE_ID)
-const nonNerdyOnlyControl:HTMLElement|null = document.getElementById(SELECTORS.NON_NERDY_CONTROL_ID)
-
-if (!quoteEl) {
-  throw new Error(`No element with id: ${QUOTE_EL_ID}`)
-}
-if (!(quoteChanger instanceof HTMLButtonElement)) {
-  throw new Error(`No element with id: ${QUOTE_CHANGE_TRIGGER_ID}`)
-}
-if (!(twitterShare instanceof HTMLAnchorElement)) {
-  throw new Error(`Element with id "${TWITTER_SHARE_ID}" must be an anchor`)
-}
-if (
-  !(nonNerdyOnlyControl instanceof HTMLInputElement && nonNerdyOnlyControl.type === 'checkbox')
-) {
-  throw new Error(`Element with id "${NON_NERDY_CONTROL_ID}" must be an anchor`)
-}
+const quoteEl:HTMLElement = validateElement(
+  document.getElementById(SELECTORS.QUOTE_EL_ID)
+)
+const quoteChanger:HTMLElement = validateElement(
+  document.getElementById(SELECTORS.QUOTE_CHANGE_TRIGGER_ID)
+)
+const twitterShare:HTMLAnchorElement = validateAnchor(
+  document.getElementById(SELECTORS.TWITTER_SHARE_ID)
+)
+const nonNerdyOnlyControl:HTMLInputElement = validateCheckbox(
+  document.getElementById(SELECTORS.NON_NERDY_CONTROL_ID)
+)
+const soundControl:HTMLInputElement = validateCheckbox(
+  document.getElementById(SELECTORS.SOUND_CONTROL_ID)
+)
 
 const quoteController = new QuoteController(
   {
     dao: new JSONFileQuoteDAO(data),
     factory: new QuoteFactory(),
-    renderer: new YamchaQuoteRenderer(quoteEl)
+    renderer: new YamchaQuoteRenderer(quoteEl),
+    soundPlayer: new TeleportSoundPlayer()
   }
 )
 
@@ -52,20 +52,24 @@ const updateTwitterLink = (quote:QuoteDTO) => {
  * Gets a random quote and updates the block for quotes
  */
 const changeQuote = () => {
-  teleportSound.play()
   quoteController.update()
     .then(updateTwitterLink)
 }
 
 const toggleNonNerdy = () => {
   const nonNerdyOnly = !nonNerdyOnlyControl.checked
-  teleportSound.play()
   quoteController.toggleNonNerdyOnly(nonNerdyOnly)
     .then(quoteOrNothing => quoteOrNothing && updateTwitterLink(quoteOrNothing))
 }
 
+const toggleSound = () => {
+  const shouldPlaySound = !soundControl.checked
+  quoteController.toggleSound(shouldPlaySound)
+}
+
 quoteChanger.addEventListener('click', changeQuote)
 nonNerdyOnlyControl.addEventListener('change', toggleNonNerdy)
+soundControl.addEventListener('change', toggleSound)
 
 // set initial quote
 changeQuote()
