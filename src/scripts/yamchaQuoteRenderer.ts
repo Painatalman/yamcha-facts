@@ -22,7 +22,7 @@ class YamchaQuoteRenderer implements QuoteRenderer {
   _getPromiseForSingleAnimation(func: () => void): Promise<void> {
     const hasReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
-    );
+    ).matches;
 
     if (hasReducedMotion) return Promise.resolve(func());
 
