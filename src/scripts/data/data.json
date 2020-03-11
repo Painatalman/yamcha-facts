@@ -25,14 +25,22 @@
     "All men are created equal... except Yamcha, he sucks!",
     "An old lady helped Yamcha cross the street",
     "Any person who finishes last still gets ahead of Yamcha",
-    "Braille can speak Yamcha",
     "By singing, Yamcha can be shattered by glass",
-    "Dark Souls was originally named Yamcha's Life... but he couldn't get past the title screen",
+    {
+      "text":"Dark Souls was originally named Yamcha's Life... but he couldn't get past the title screen",
+      "isNerdy": true
+    },
     "Due to censorship, it's common to replace terms related to death with 'being Yamcha-d'",
-    "Even Krillin thinks Yamcha stinks",
+    {
+      "text":"Even Krillin thinks Yamcha stinks",
+      "isNerdy": true
+    },
     "Fighters train with punching bags the same way punching bags train with Yamcha",
-    "George Lucas followed Yamcha's advice. Then the prequels were made",
-    "God doesn't believe in Yamcha",
+    {
+      "text": "George Lucas followed Yamcha's advice. Then the prequels were made",
+      "isNerdy": true
+    }
+    ,"God doesn't believe in Yamcha",
     "For some reason, there's a locker named Yamcha. It never locks.",
     "If Yamcha collects all dragon balls, he can make 0 wishes",
     "If Yamcha gets robbed, he has to go to jail",
@@ -50,13 +58,15 @@
       "text": "Jobbers usually perform their finishing move on Yamcha. Six times",
       "isNerdy": true
     },
-    "Life's got a restraining order on Yamcha",
     "Lightning never strikes twice... unless it's Yamcha",
     {
       "text": "Look, I can see Yamcha's parachute! He's not ok.",
       "isNerdy": true
     },
-    {"text":"Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker", "isNerdy": true},
+    {
+      "text":"Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker", 
+      "isNerdy": true
+    },
     "Murphy's Law was originally planned to be Yamcha's Law, but Yamcha lost a vote by a count of zero",
     "Negative numbers go from 0 to Yamcha",
     "Neither Cell nor Buu would ever risk absorbing Yamcha. They'd become weaker",
@@ -101,6 +111,7 @@
       "text": "Yamcha can die instantly from having part of his name written on Death Note",
       "isNerdy": true
     },
+    "Yamcha can drown in a plain",
     "Yamcha can fall from the ground floor and break a leg",
     "Yamcha can get a flat tire on a boat",
     "Yamcha can get dehydrated from drinking water",
@@ -158,6 +169,7 @@
     "Yamcha's biography is also a drama, and not a good one!",
     "Yamcha's birthday is february 31st",
     "Yamcha's body will never decompose. Not even maggots would eat that!",
+    "Yamcha's clothing size is L... for loser",
     "Yamcha's favourite car is the Fiat Multipla... actually, it was his idea!",
     "Yamcha's favourite software is Windows Vista",
     "Yamcha's favourite Star Wars character is Jar Jar Binks",
