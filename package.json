@@ -1,13 +1,14 @@
 {
   "name": "yamcha-facts",
   "version": "0.0.1",
-  "description": "Truths about the life of Dragon Ball's exact opposite of Chuck Norris",
+  "description": "Fun facts about Dragon Ball's Yamcha, the exact opposite of Chuck Norris",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server --env.NODE_ENV=development",
+    "start": "npm run compile-dev & npm run run-webhook-server",
     "test": "jest --watch",
     "compile": "webpack --env.NODE_ENV=production",
-    "compile-dev": "webpack --env.NODE_ENV=development"
+    "compile-dev": "webpack --env.NODE_ENV=development",
+    "run-webhook-server": "ts-node webhook-server/index.ts"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/Painatalman/frasesdomica#readme",
   "devDependencies": {
+    "@types/express": "^4.17.9",
     "@types/jest": "^24.0.18",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
@@ -51,5 +53,11 @@
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "ts-dotenv": "^0.8.3",
+    "ts-node": "^9.1.1"
   }
 }

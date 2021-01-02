@@ -1,21 +1,21 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const distPath = path.resolve(__dirname, './dist')
-const srcPath = path.resolve(__dirname, './src')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const distPath = path.resolve(__dirname, './dist');
+const srcPath = path.resolve(__dirname, './src');
 
-module.exports = env => {
-  const mode = env.NODE_ENV
+module.exports = (env) => {
+  const mode = env.NODE_ENV;
 
   return {
     mode,
-    entry: path.resolve(__dirname, './src/scripts/app.ts'),
+    entry: {
+      main: path.resolve(__dirname, './src/scripts/app.ts')
+    },
     output: {
       path: distPath,
       filename: '[name].js'
-    },
-    devServer: {
-      contentBase: distPath
     },
     module: {
       rules: [
@@ -39,7 +39,7 @@ module.exports = env => {
               options: {
                 sourceMap: true
               }
-            },
+            }
           ]
         },
         {
@@ -54,29 +54,39 @@ module.exports = env => {
     },
     plugins: [
       new CleanWebpackPlugin([`${distPath}/*.*`], {}),
-      new HtmlWebpackPlugin(
-        {
-          filename: 'index.html',
-          hash: true,
-          template: 'src/templates/index.html',
-          title: 'Yamcha Facts',
-          description: 'Truths about the life of Dragon Ball\'s exact opposite of Chuck Norris',
-          inject: false,
-          minify: mode === 'production' ? {
-            minifyCSS: true,
-            minifyJS: true,
-            removeComments: true,
-            removeRedundantAttributes: true,
-            collapseWhitespace: true
-          } : false
-        }
-      )
+      new HtmlWebpackPlugin({
+        filename: 'index.html',
+        hash: true,
+        template: 'src/templates/index.html',
+        title: 'Yamcha Facts',
+        description:
+          "Truths about the life of Dragon Ball's exact opposite of Chuck Norris",
+        inject: false,
+        minify:
+          mode === 'production'
+            ? {
+                minifyCSS: true,
+                minifyJS: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                collapseWhitespace: true
+              }
+            : false
+      }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: `${srcPath}/scripts/data/data.json`,
+            to: `${distPath}/data.json`
+          }
+        ]
+      })
     ],
     resolve: {
       alias: {
-        "@": srcPath,
+        '@': srcPath
       },
-      extensions: ['.js','.ts','.json']
+      extensions: ['.js', '.ts', '.json']
     }
-  }
-}
+  };
+};
