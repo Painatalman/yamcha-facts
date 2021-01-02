@@ -9,21 +9,21 @@ import SoundPlayer from './interfaces/SoundPlayer'
 
 
 class QuoteController {
-  _dao: QuoteDAO
-  _factory: QuoteFactory
-  _renderer: QuoteRenderer
-  _soundPlayer: SoundPlayer|undefined
-  _lastQuoteId: id|undefined
-  _settings: QuoteControllerSettings
+  private _dao: QuoteDAO
+  private _factory: QuoteFactory
+  private _renderer: QuoteRenderer
+  private _soundPlayer: SoundPlayer|undefined
+  private _lastQuoteId: id|undefined
+  private _settings: QuoteControllerSettings
 
   constructor({
     dao, factory, renderer, settings, soundPlayer
   }: {
-    dao: QuoteDAO,
-    factory: QuoteFactory,
-    renderer: QuoteRenderer,
-    soundPlayer?: SoundPlayer,
-    settings?: Object
+    dao: QuoteDAO;
+    factory: QuoteFactory;
+    renderer: QuoteRenderer;
+    soundPlayer?: SoundPlayer;
+    settings?: Record<string, any>;
   }) {
     const defaultSettings = {
       nonNerdyOnly: false,
@@ -49,7 +49,7 @@ class QuoteController {
     return quote 
   }
 
-  async _getRandomQuote() {
+  private async _getRandomQuote() {
     const quoteData = await this._dao.fetchRandomQuoteData(
       this._lastQuoteId
     )
@@ -57,7 +57,7 @@ class QuoteController {
     return this._createQuoteAndSetLastId(quoteData)
   }
 
-  async _getRandomNonNerdyQuote() {
+  private async _getRandomNonNerdyQuote() {
     const quoteData = await this._dao.fetchRandomNonNerdyQuoteData(
       this._lastQuoteId
     )
@@ -65,11 +65,11 @@ class QuoteController {
     return this._createQuoteAndSetLastId(quoteData)
   }
 
-  async _renderQuote(quote:QuoteDTO) {
+  private async _renderQuote(quote: QuoteDTO) {
     await this._renderer.render(quote)
   }
 
-  _playSoundIfApplicable() {
+  private _playSoundIfApplicable() {
     const {_soundPlayer, _settings } = this
 
     if (_soundPlayer && _settings.playSound) {
@@ -77,7 +77,7 @@ class QuoteController {
     }
   }
 
-  async update() {
+  public async update() {
     const nonNerdyOnly = this._settings.nonNerdyOnly
 
     const quote = nonNerdyOnly ?
@@ -89,7 +89,7 @@ class QuoteController {
     return quote
   }
 
-  async toggleNonNerdyOnly(nonNerdyOnly: boolean) {
+  public async toggleNonNerdyOnly(nonNerdyOnly: boolean) {
     if (nonNerdyOnly === this._settings.nonNerdyOnly) {
       return Promise.resolve()
     }
@@ -98,7 +98,7 @@ class QuoteController {
     return await this.update()
   }
 
-  toggleSound(shouldPlay: boolean) {
+  public toggleSound(shouldPlay: boolean) {
     this._settings.playSound = shouldPlay
   }
 }

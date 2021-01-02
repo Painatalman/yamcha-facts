@@ -1,34 +1,47 @@
-import YamchaQuoteRenderer from '../yamchaQuoteRenderer'
-import QuoteDTO from '../QuoteDTO'
+import YamchaQuoteRenderer from '../yamchaQuoteRenderer';
+import QuoteDTO from '../QuoteDTO';
+
+function mockMatchMedia() {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation((query) => ({
+      matches: true,
+      media: query,
+      onchange: null,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn()
+    }))
+  });
+}
 
 describe('Yamcha Quote Renderer', () => {
   describe('render', () => {
-    it('should update its target element based on a quote\'s content', async () => {
+    beforeAll(() => {
+      mockMatchMedia();
+    });
+    it("should update its target element based on a quote's content", async () => {
       document.body.innerHTML = `
         <div id="quote">
           Not what you expect
         </div>
-      `
+      `;
 
-      const el = document.getElementById('quote')
+      const el = document.getElementById('quote');
 
       if (!el) {
-        throw new Error('Configuration error: element with id quote not found')
+        throw new Error('Configuration error: element with id quote not found');
       }
 
-      const renderer = new YamchaQuoteRenderer(el)
+      const renderer = new YamchaQuoteRenderer(el);
       const quote = new QuoteDTO({
         text: 'What you expect',
         id: '3'
-      })
+      });
 
-      // mock hide and show: they make no sense in a headless environment
-      renderer._hideQuote = jest.fn(() => Promise.resolve())
-      renderer._showQuote = jest.fn(() => Promise.resolve())
+      await renderer.render(quote);
 
-      await renderer.render(quote)
-
-      expect(el.textContent).toEqual('What you expect')
-    })
-  })
-})
+      expect(el.textContent).toEqual('What you expect');
+    });
+  });
+});

@@ -1,9 +1,12 @@
-import QuoteFactoryInterface from './interfaces/QuoteFactory'
-import QuoteDTO from './QuoteDTO'
-import QuoteDataParsed from './types/QuoteDataParsed'
+import QuoteFactoryInterface from './interfaces/QuoteFactory';
+import QuoteDTO from './QuoteDTO';
+import QuoteDataParsed from './types/QuoteDataParsed';
 
+/**
+ * Parses data into a properly formatted quote
+ */
 export default class QuoteFactory implements QuoteFactoryInterface {
-  createQuote(data:QuoteDataParsed) {
-    return new QuoteDTO(data)
+  public createQuote(data: QuoteDataParsed): QuoteDTO {
+    return new QuoteDTO(data);
   }
 }

@@ -188,7 +188,10 @@
     "Yamcha's biography is also a drama, and not a good one!",
     "Yamcha's birthday is february 31st",
     "Yamcha's clothing size is L... for loser",
-    "Yamcha's favourite car is the Fiat Multipla (actually, it was his idea!)",
+    {
+      "text":" Yamcha's favourite car is the Fiat Multipla (actually, it was his idea!)",
+      "isNerdy": true
+    },
     {
       "text": "Yamcha's favourite software is Windows Vista",
       "isNerdy": true
@@ -201,7 +204,7 @@
       "text": "Yamcha's Master balls always fail",
       "isNerdy": true
     },
-    "Yamcha's name means loser... in all languages",
+    "Yamcha's name means loser... in any language",
     {
       "text": "Yamcha's power level is below NEGATIVE NINE THOUSAAAAAAAAND!",
       "isNerdy": true

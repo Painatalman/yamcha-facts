@@ -1,33 +1,47 @@
-import QuoteFactory from '../QuoteFactory'
-import QuoteDTO from "../interfaces/QuoteDTO"
-import QuoteDataParsed from '../types/QuoteDataParsed'
+import QuoteFactory from '../QuoteFactory';
 
-class MockQuoteDTO implements QuoteDTO {
-  getContent(): string {
-    return 'mock'
-  }
+describe('Quote', () => {
+  it('should allow access to its content', () => {
+    const factory = new QuoteFactory();
+    const quote = factory.createQuote({
+      text: "Yamcha's Master balls always fail",
+      id: '0',
+      isNerdy: false
+    });
 
-  getId() {
-    return '_mock'
-  }
+    expect(quote.getContent()).toEqual("Yamcha's Master balls always fail");
+  });
 
-  equals() {
-    return false
-  }
-}
+  it('should allow access to its id', () => {
+    const factory = new QuoteFactory();
+    const quote = factory.createQuote({
+      text: "Yamcha's Master balls always fail",
+      id: '2',
+      isNerdy: true
+    });
 
-describe('Quote Factory', () => {
-  it(
-    'should generate a quote from parsed data',
-    async () => {
-      const { createQuote } = new QuoteFactory()
-      const data:QuoteDataParsed = {
-        id: '_mock',
-        text: 'mock',
-        isNerdy: false
-      }
+    expect(quote.getId()).toEqual('2');
+  });
 
-      expect(createQuote(data)).toEqual(new MockQuoteDTO())
-    }
-  )
-})
+  it('should be compared based on its id, not content', () => {
+    const factory = new QuoteFactory();
+    const quote = factory.createQuote({
+      text: "Yamcha's Master balls always fail",
+      id: '1',
+      isNerdy: true
+    });
+    const sameContentQuote = factory.createQuote({
+      text: "Yamcha's Master balls always fail",
+      id: '2',
+      isNerdy: false
+    });
+    const diffContentQuote = factory.createQuote({
+      text: "A man once said: 'If you ain't first, you're Yamcha!'",
+      id: '1',
+      isNerdy: true
+    });
+
+    expect(quote.equals(sameContentQuote)).toBe(false);
+    expect(quote.equals(diffContentQuote)).toBe(true);
+  });
+});

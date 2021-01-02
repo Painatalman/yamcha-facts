@@ -1,9 +1,9 @@
-import id from "./id"
+import id from './id';
 
-type QuoteDataParsed =  {
-  text: string,
-  isNerdy: boolean,
-  id: id
-}
+type QuoteDataParsed = {
+  text: string;
+  isNerdy: boolean;
+  id: id;
+};
 
-export default QuoteDataParsed
+export default QuoteDataParsed;

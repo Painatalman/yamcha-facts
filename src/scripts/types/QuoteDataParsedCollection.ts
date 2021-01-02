@@ -1,9 +1,9 @@
-import QuoteDataParsed from "./QuoteDataParsed"
-import QuoteDataExtra from "./QuoteDataExtra";
+import QuoteDataParsed from './QuoteDataParsed';
+import QuoteDataExtra from './QuoteDataExtra';
 
 type QuoteDataCollection = {
-  quotes: QuoteDataParsed[]
-  extras: QuoteDataExtra
-}
+  quotes: QuoteDataParsed[];
+  extras: QuoteDataExtra;
+};
 
-export default QuoteDataCollection
+export default QuoteDataCollection;
