@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 const distPath = path.resolve(__dirname, './dist');
 const srcPath = path.resolve(__dirname, './src');
 
@@ -23,13 +23,6 @@ module.exports = (env) => {
           test: /\.tsx?$/,
           use: 'ts-loader',
           include: srcPath
-        },
-        {
-          test: /\.js$/,
-          include: srcPath,
-          use: {
-            loader: 'babel-loader'
-          }
         },
         {
           test: /\.css$/,
@@ -58,9 +51,9 @@ module.exports = (env) => {
         filename: 'index.html',
         hash: true,
         template: 'src/templates/index.html',
-        title: 'Yamcha Facts',
+        title: 'Yamcha Facts: random fun for Dragon Ball fans',
         description:
-          "Truths about the life of Dragon Ball's exact opposite of Chuck Norris",
+          "This is a casual and fun website for Dragon Ball and Yamcha fans. It's a parody website similar to Chuck Norris fact lists, with humorously impossible feats. But this is Yamcha we're talking about, so these impossible feats are nothing to be proud of!",
         inject: false,
         minify:
           mode === 'production'

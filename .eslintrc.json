@@ -1,13 +1,14 @@
 {
   "parser": "@typescript-eslint/parser",
+  "plugins": ["eslint-plugin-import-helpers", "jsdoc"],
   "extends": [
-    "jsdoc",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "prettier/@typescript-eslint"
   ],
   "env": {
     "browser": true,
-    "es6": true,
+    "es2020": true,
     "node": true,
     "jest": true
   },
@@ -15,15 +16,8 @@
     "$": false
   },
   "rules": {
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
-    "quotes": [1, "single"],
-    "eol-last": 1,
     "prefer-template": 1,
-    "comma-dangle": [1,"never"],
-    "no-cond-assign": [1,"always"],
+    "no-cond-assign": [1, "always"],
     "no-console": 1,
     "no-constant-condition": 1,
     "no-control-regex": 1,
@@ -35,10 +29,8 @@
     "no-empty": 1,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 1,
-    "no-extra-parens": [1,"functions"],
-    "no-extra-semi": 2,
     "no-func-assign": 2,
-    "no-inner-declarations": [1,"both"],
+    "no-inner-declarations": [1, "both"],
     "no-invalid-regexp": 2,
     "no-irregular-whitespace": 2,
     "no-negated-in-lhs": 1,
@@ -54,7 +46,14 @@
     "no-delete-var": 1,
     "no-undef": 1,
     "no-unused-vars": 1,
-    "no-mixed-spaces-and-tabs": [1,"smart-tabs"]
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
   },
   "parserOptions": {
     "sourceType": "module",
