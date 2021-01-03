@@ -18,14 +18,14 @@ app.use(express.json());
 app.use(express.static('dist'));
 
 function startServer(): void {
-  // set up random quote provider
-
-  // set up routine to send random quote
   const provider = new Provider({
     dao: new Dao(data),
     factory: new Factory()
   });
-  setInterval(() => setRandomQuote(provider), 60 * 1000);
+  const AN_HOUR = 60 * 60 * 1000;
+
+  setRandomQuote(provider);
+  setInterval(() => setRandomQuote(provider), AN_HOUR);
 }
 
 async function setRandomQuote(provider: QuoteProvider): Promise<void> {
