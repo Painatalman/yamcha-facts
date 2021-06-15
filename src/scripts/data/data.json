@@ -5,10 +5,6 @@
       "isNerdy": true
     },
     {
-      "text": "A lion can eat Yamcha and still be hungry",
-      "isNerdy": false
-    },
-    {
       "text": "A man once said: 'If you ain't first, you're Yamcha!'",
       "isNerdy": true
     },
@@ -28,14 +24,13 @@
     "An old lady helped Yamcha cross the street",
     "Any person who finishes last still gets ahead of Yamcha",
     "By singing, Yamcha can be shattered by glass",
-    "Cutting Yamcha makes onions cry (of joy)",
+    "Cutting Yamcha makes onions cry",
     {
-      "text":"Dark Souls's prototype was originally named Yamcha's Life, but no one could get past the title screen in that version",
+      "text": "Dark Souls's prototype was originally named Yamcha's Life, but no one could get past the title screen in that version",
       "isNerdy": true
     },
-    "Due to censorship, it's common to replace terms related to death with 'being Yamcha-d'",
     {
-      "text":"Even Krillin thinks Yamcha stinks",
+      "text": "Even Krillin thinks Yamcha stinks",
       "isNerdy": true
     },
     "Fighters train with punching bags the same way punching bags train with Yamcha",
@@ -48,7 +43,7 @@
     "If Yamcha gets robbed, he has to go to jail",
     "If you commit a foul against Yamcha, your team can score a penalty",
     {
-      "text": "In fighting games, 'training mode' is commonly known as 'Yamcha'",
+      "text": "In fighting games, 'training mode' is commonly known as 'Yamcha hitting'",
       "isNerdy": true
     },
     {
@@ -63,20 +58,23 @@
       "text": "Jobbers usually perform their finishing move on Yamcha. Six times",
       "isNerdy": true
     },
-    "Lightning never strikes twice... unless it's Yamcha",
+    "Lightning never strikes twice... unless Yamcha's the target",
     {
       "text": "Look, I can see Yamcha's parachute! He's not ok.",
       "isNerdy": true
     },
     {
-      "text":"Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker", 
+      "text": "Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker",
       "isNerdy": true
     },
     "Murphy's Law was originally named after Yamcha",
     "Negative numbers go from 0 to Yamcha",
     "On the streets, it's common for dogs to step on Yamcha",
-    "On a clown's birthday, Yamcha is usually hired to be made fun of",
-    "$pokemon is confused! Yamcha hurt himself in its confusion!",
+    "On a clown's birthday, Yamcha is hired to be made fun of",
+    {
+      "text": "$pokemon is confused! Yamcha hurt himself in its confusion!",
+      "isNerdy": true
+    },
     "Rabbits can pull Yamcha out of their hats",
     "Someone shared a picture of Yamcha on $socialnetwork. Yamcha's account was deleted",
     "Yamcha tried to capture a Pokémon, once. He caught himself",
@@ -94,10 +92,12 @@
     },
     "When Yamcha goes for a swim, he gets burned",
     "Whenever Yamcha buys Kinder Surprise, it comes with no toy",
-    {"text":"Whenever Yamcha trains on the Hyperbolic Time Chamber for a long time, he comes out weaker", "isNerdy": true},
     "While you were reading this, Yamcha died (right after the first 'w')",
-    {"text":"Yamcha installed Chrome so that he could download Internet Explorer","isNerdy": true},
-    {"text":"Yamcha bought WinRAR", "isNerdy": true},
+    {
+      "text": "Yamcha installed Chrome to download Internet Explorer",
+      "isNerdy": true
+    },
+    { "text": "Yamcha bought WinRAR", "isNerdy": true },
     {
       "text": "Yamcha can be hit by a stormtrooper... any stormtrooper",
       "isNerdy": true
@@ -113,13 +113,12 @@
       "text": "Yamcha can die instantly from having part of his name written on Death Note",
       "isNerdy": true
     },
-    "Yamcha can die of young age",
     "Yamcha can drown in a plain",
     "Yamcha can get a flat tire on a boat",
     "Yamcha can get dehydrated from drinking water",
     "Yamcha can get food poisoning without eating",
     {
-      "text":"Yamcha can get viruses on a Mac", 
+      "text": "Yamcha can get viruses on a Mac",
       "isNerdy": true
     },
     "Yamcha can lose a game by playing rock against scissors",
@@ -133,7 +132,6 @@
       "isNerdy": true
     },
     "Yamcha can win the lottery and still owe money for the ticket",
-    "Yamcha can't afford free stuff",
     {
       "text": "Yamcha can't believe in the heart of the cards",
       "isNerdy": true
@@ -142,37 +140,40 @@
       "text": "Yamcha couldn't get a role in The Room due to his bad acting",
       "isNerdy": true
     },
-    { 
+    {
       "text": "Yamcha day is friday the 13th",
       "isNerdy": true
     },
-    "Yamcha has died more often than anyone's internet connection ever did",
-    "Yamcha failed his driver's test to ride a shopping cart",
+    "Yamcha has died more often than anyone's internet connection",
+    "Yamcha failed his driver's test (to ride a shopping cart)",
     "Yamcha finished a time trial once. His time was infinity",
     {
       "text": "Yamcha found the gravity chamber too hard to train in, even though it was turned off",
       "isNerdy": true
     },
+    "Yamcha gets drunk with just one beer (alcohol-free included)",
+    "Yamcha gets speeding tickets for dying so fast",
     "Yamcha gets sunburned at night",
     "Yamcha got a speeding ticket for standing still",
     "Yamcha got fired for being unemployed",
     {
-      "text": "If Yamcha were a Pokémon, he'd be weak against all types... including Normal",
+      "text": "If Yamcha were a Pokémon, he'd be weak against all types (including Normal)",
       "isNerdy": true
     },
     {
-      "text":"Yamcha is allergic to Senzu beans",
+      "text": "Yamcha is allergic to Senzu beans",
       "isNerdy": true
     },
-    "Yamcha likes pineapple on a pizza",
-    "Yamcha lost a game of connect-1 even though he played first",
-    "Yamcha lost his virginity after his son",
+    {
+      "text": "Yamcha loses to anyone in ONE PUNCH, man!",
+      "isNerdy": true
+    },
+    "Yamcha lost a game of connect-1, even though he played first",
     "Yamcha needs a GPS system to get from his house to the bathroom",
     "Yamcha ordered Coca-Cola Zero. He got regular Coke with his face on it",
-    "Yamcha pays the internet bills so he can watch TV",
     "Yamcha retired at the age of 5",
     {
-      "text":"Yamcha saw The Ring. He couldn't even last a day, let alone a week...",
+      "text": "Yamcha saw The Ring. He couldn't even last a day, let alone a week...",
       "isNerdy": true
     },
     "Yamcha stopped walking at the age of 1... month",
@@ -185,18 +186,19 @@
       "text": "Yamcha will eventually join Smash Bros., but only after Waluigi joins the battle!",
       "isNerdy": true
     },
+    "Yamcha wears clown shoes to (try to) be taken seriously",
     "Yamcha's biography is also a drama, and not a good one!",
     "Yamcha's birthday is february 31st",
-    "Yamcha's clothing size is L... for loser",
+    "Yamcha's clothing size is L (for loser)",
     {
-      "text":" Yamcha's favourite car is the Fiat Multipla (actually, it was his idea!)",
+      "text": " Yamcha's favourite car is the Fiat Multipla (actually, it was his idea!)",
       "isNerdy": true
     },
     {
       "text": "Yamcha's favourite software is Windows Vista",
       "isNerdy": true
     },
-    { 
+    {
       "text": "Yamcha's favourite Star Wars character is Jar Jar Binks",
       "isNerdy": true
     },
@@ -209,26 +211,23 @@
       "text": "Yamcha's power level is below NEGATIVE NINE THOUSAAAAAAAAND!",
       "isNerdy": true
     },
+    "Yamcha's the first youtuber to ever reach 1.0000.000 un-subscribers (his subscriber count still 0)",
     {
       "text": "Yamcha's version of Ultra Instinct makes him get hit by every punch without thinking about it",
       "isNerdy": true
     },
     "You can't tell Yamcha to 'have a blast'. He'd take it too literally",
     {
-      "text": "\"You're already dead\". Yamcha died even before Kenshiro could finish saying that",
+      "text": "\"You're already dead?!\", said Kenshiro before he could strike Yamcha",
       "isNerdy": true
     }
   ],
   "extras": {
-    "pokemon": [
-      "ENTEI",
-      "RAIKOU",
-      "SUICUNE",
-      "PIKACHU"
-    ],
+    "pokemon": ["ENTEI", "MAGIKARP", "PIKACHU", "RAIKOU", "SUICUNE"],
     "socialnetwork": [
       "Facebook",
       "Instagram",
+      "MySpace",
       "Pinterest",
       "Twitter"
     ]
