@@ -4,12 +4,11 @@
   "description": "Fun facts about Dragon Ball's Yamcha, the exact opposite of Chuck Norris",
   "main": "app.js",
   "scripts": {
-    "start": "npm run compile-dev & npm run run-webhook-server",
+    "start": "npm run compile-dev",
     "test": "jest",
     "test-watch": "jest --watch",
     "compile": "webpack --env.NODE_ENV=production",
-    "compile-dev": "webpack --env.NODE_ENV=development",
-    "run-webhook-server": "ts-node webhook-server/index.ts"
+    "compile-dev": "webpack --env.NODE_ENV=development"
   },
   "repository": {
     "type": "git",
