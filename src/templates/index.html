@@ -1,14 +1,17 @@
-<% // for (var file in htmlWebpackPlugin.files) { console.log(`DEBUGGER: ---${file}`) } %>
-<% // https://github.com/jaketrent/html-webpack-template/blob/86f285d5c790a6c15263f5cc50fd666d51f974fd/index.html for tips %>
+<% // for (var file in htmlWebpackPlugin.files) { console.log(`DEBUGGER:
+---${file}`) } %> <% //
+https://github.com/jaketrent/html-webpack-template/blob/86f285d5c790a6c15263f5cc50fd666d51f974fd/index.html
+for tips %>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      <%= htmlWebpackPlugin.options.title %>
-    </title>
-    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="<%= htmlWebpackPlugin.options.description %>"
+    />
     <style>
       <%= require('@/stylesheets/styles.css') %>
     </style>
@@ -18,69 +21,86 @@
     <header class="hero main-hero is-primary has-text-centered">
       <div class="hero-body">
         <h1 class="title">
-          <%= htmlWebpackPlugin.options.title %>
+          Yamcha facts <br />
+          <span class="is-size-5">Random fun for Dragon Ball fans</span>
         </h1>
       </div>
     </header>
     <main class="container section quote-section has-text-centered">
       <div class="columns">
         <div class="column is-two-thirds is-offset-2">
-            <h2 class="title has-text-primary">Random Fact about Yamcha</h2>
-            <div class="quote box">
-              <div id="quote" class="animated faster is-size-5" aria-live="polite">
-
-              </div>
-            </div>
-            <div class="quote-controls has-text-centered">
-              <button class="button is-primary is-uppercase" id="quotebutton">Get another fact</button>
-              <br>
-              <a 
-                 class="tag is-primary twitter-icon-wrapper" 
-                 href='#' type="button" 
-                 id="twitteranchor" 
-                 onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no');return false;"
-                 aria-label="Share quote on Twitter"
-              >
-                <%= require('@/svg/twitter.svg') %>
-              </a>
-              <div class="panel">
+          <h2 class="title has-text-primary">Random Fact about Yamcha</h2>
+          <div class="quote box">
+            <div
+              id="quote"
+              class="animated faster is-size-5"
+              aria-live="polite"
+            ></div>
+          </div>
+          <div class="quote-controls has-text-centered">
+            <button class="button is-primary is-uppercase" id="quotebutton">
+              Get another fact
+            </button>
+            <br />
+            <a
+              class="tag is-primary twitter-icon-wrapper"
+              href="#"
+              type="button"
+              id="twitteranchor"
+              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no');return false;"
+              aria-label="Share quote on Twitter"
+            >
+              <%= require('@/svg/twitter.svg') %>
+            </a>
+            <div class="field">
+              <div class="field-body">
                 <div class="field">
-                  <div class="field-body">
-                    <div class="field">
-                      <div class="control has-text-centered">
-                        <label class="checkbox">
-                          <input type="checkbox" name="nonNerdyOnly" id="nonNerdyOnlyControl" checked>
-                          Include nerdy quotes
-                        </label>
-                      </div>
-                      <div class="control has-text-centered">
-                        <label class="checkbox">
-                          <input type="checkbox" name="soundControl" id="soundControl" checked>
-                          Disable sound
-                        </label>
-                      </div>
-                    </div>
+                  <div class="control has-text-centered">
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        name="nonNerdyOnly"
+                        id="nonNerdyOnlyControl"
+                        checked
+                      />
+                      Include nerdy quotes
+                    </label>
+                  </div>
+                  <div class="control has-text-centered">
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        name="soundControl"
+                        id="soundControl"
+                        checked
+                      />
+                      Disable sound
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </main>
-    <hr size="1">
+    <hr size="1" />
     <section class="section contribution-section">
       <div class="container">
         <div class="columns">
           <div class="column is-8 is-offset-2">
-            <h2 class="title has-text-centered has-text-primary is-size-5">Contributions and Sources</h2>
+            <h2 class="title has-text-centered has-text-primary is-size-5">
+              Contributions and Sources
+            </h2>
             <p>
-              Most facts came from, or were based on, suggestions from friends and memes or comments around the internet. After all, making
-              fun of Yamcha is nothing new!
+              Most facts came from, or were based on, suggestions from friends
+              and memes or comments around the internet. After all, making fun
+              of Yamcha is nothing new!
             </p>
             <p>
-              Either with a suggestion or as meme whose source may be hard to find, here's a list of some of the people and sources that
-              made this project possible.
+              Either with a suggestion or as meme whose source may be hard to
+              find, here's a list of some of the people and sources that made
+              this project possible.
             </p>
           </div>
         </div>
@@ -88,36 +108,39 @@
           <div class="column is-4 is-offset-2">
             <h3 class="subtitle has-text-centered">Quotes (directly)</h3>
             <ul class="contribution-section__list">
-              <li>
-                <b>Torisilva</b> - lots of quote contribution
-              </li>
-              <li>
-                <b>joaoao</b> - many quote contribution
-              </li>
-              <li>
-                <b>Magnus Fox</b> - many quote contribution
-              </li>
+              <li><b>Torisilva</b> - lots of quote contribution</li>
+              <li><b>joaoao</b> - many quote contribution</li>
+              <li><b>Magnus Fox</b> - many quote contribution</li>
             </ul>
           </div>
           <div class="column is-4">
             <h2 class="subtitle has-text-centered">Sources and Inspiration</h2>
             <ul class="contribution-section__list">
               <li>
-                <a href="https://teamfourstar.com/">Team Four Star</a> - creators of Dragon Ball Z Abridged,
-                with some of the best Yamcha puns ever
+                <a href="https://teamfourstar.com/">Team Four Star</a> -
+                creators of Dragon Ball Z Abridged, with some of the best Yamcha
+                puns ever
               </li>
               <li>
-                <a href="https://www.pinterest.pt/pin/69946600440747568/" target=_blank>
-                    This
-                </a> and
-                <a href="https://www.pinterest.pt/pin/429530883203525689/" target=_blank>
+                <a
+                  href="https://www.pinterest.pt/pin/69946600440747568/"
+                  target="_blank"
+                >
                   This
-                </a> Pokémon memes
+                </a>
+                and
+                <a
+                  href="https://www.pinterest.pt/pin/429530883203525689/"
+                  target="_blank"
+                >
+                  This
+                </a>
+                Pokémon memes
               </li>
               <li>
                 <a
                   href="https://aminoapps.com/c/dragonballz/page/blog/yamcha-meme/r07i_eu0e8Kpze4w6N248MoKdvxn1MR"
-                  target=_blank
+                  target="_blank"
                 >
                   This cell meme
                 </a>
@@ -133,9 +156,9 @@
           <div class="column is-two-thirds is-offset-2">
             <p class="has-text-centered">
               Made by
-              <strong>Torisilva</strong> and
-              <strong>Painatalman</strong> with creativity, basic coding skills and, of course,
-              <a href="https://bulma.io/" target=_blank>Bulma</a>
+              <strong>Torisilva</strong> and <strong>Painatalman</strong> with
+              creativity, basic coding skills and, of course,
+              <a href="https://bulma.io/" target="_blank">Bulma</a>
             </p>
           </div>
         </div>

@@ -26,11 +26,11 @@
     "By singing, Yamcha can be shattered by glass",
     "Cutting Yamcha makes onions cry",
     {
-      "text":"Dark Souls's prototype was originally named Yamcha's Life, but no one could get past the title screen in that version",
+      "text": "Dark Souls's prototype was originally named Yamcha's Life, but no one could get past the title screen in that version",
       "isNerdy": true
     },
     {
-      "text":"Even Krillin thinks Yamcha stinks",
+      "text": "Even Krillin thinks Yamcha stinks",
       "isNerdy": true
     },
     "Fighters train with punching bags the same way punching bags train with Yamcha",
@@ -64,13 +64,16 @@
       "isNerdy": true
     },
     {
-      "text":"Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker", 
+      "text": "Mr. Satan rejected a fusion with Yamcha, because anyone who fuses with Yamcha becomes weaker",
       "isNerdy": true
     },
     "Murphy's Law was originally named after Yamcha",
     "Negative numbers go from 0 to Yamcha",
     "On a clown's birthday, Yamcha is hired to be made fun of",
-    "$pokemon is confused! Yamcha hurt himself in its confusion!",
+    {
+      "text": "$pokemon is confused! Yamcha hurt himself in its confusion!",
+      "isNerdy": true
+    },
     "Rabbits can pull Yamcha out of their hats",
     "Someone shared a picture of Yamcha on $socialnetwork. Yamcha's account was deleted",
     "Yamcha tried to capture a Pokémon, once. He caught himself",
@@ -89,8 +92,11 @@
     "When Yamcha goes for a swim, he gets burned",
     "Whenever Yamcha buys Kinder Surprise, it comes with no toy",
     "While you were reading this, Yamcha died (right after the first 'w')",
-    {"text":"Yamcha installed Chrome to download Internet Explorer","isNerdy": true},
-    {"text":"Yamcha bought WinRAR", "isNerdy": true},
+    {
+      "text": "Yamcha installed Chrome to download Internet Explorer",
+      "isNerdy": true
+    },
+    { "text": "Yamcha bought WinRAR", "isNerdy": true },
     {
       "text": "Yamcha can be hit by a stormtrooper... any stormtrooper",
       "isNerdy": true
@@ -111,7 +117,7 @@
     "Yamcha can get dehydrated from drinking water",
     "Yamcha can get food poisoning without eating",
     {
-      "text":"Yamcha can get viruses on a Mac", 
+      "text": "Yamcha can get viruses on a Mac",
       "isNerdy": true
     },
     "Yamcha can lose a game by playing rock against scissors",
@@ -133,7 +139,7 @@
       "text": "Yamcha couldn't get a role in The Room due to his bad acting",
       "isNerdy": true
     },
-    { 
+    {
       "text": "Yamcha day is friday the 13th",
       "isNerdy": true
     },
@@ -150,11 +156,11 @@
     "Yamcha got a speeding ticket for standing still",
     "Yamcha got fired for being unemployed",
     {
-      "text": "If Yamcha were a Pokémon, he'd be weak against all types... including Normal",
+      "text": "If Yamcha were a Pokémon, he'd be weak against all types (including Normal)",
       "isNerdy": true
     },
     {
-      "text":"Yamcha is allergic to Senzu beans",
+      "text": "Yamcha is allergic to Senzu beans",
       "isNerdy": true
     },
     {
@@ -166,7 +172,7 @@
     "Yamcha ordered Coca-Cola Zero. He got regular Coke with his face on it",
     "Yamcha retired at the age of 5",
     {
-      "text":"Yamcha saw The Ring. He couldn't even last a day, let alone a week...",
+      "text": "Yamcha saw The Ring. He couldn't even last a day, let alone a week...",
       "isNerdy": true
     },
     "Yamcha stopped walking at the age of 1... month",
@@ -182,16 +188,16 @@
     "Yamcha wears clown shoes to (try to) be taken seriously",
     "Yamcha's biography is also a drama, and not a good one!",
     "Yamcha's birthday is february 31st",
-    "Yamcha's clothing size is L... for loser",
+    "Yamcha's clothing size is L (for loser)",
     {
-      "text":" Yamcha's favourite car is the Fiat Multipla (actually, it was his idea!)",
+      "text": " Yamcha's favourite car is the Fiat Multipla (actually, it was his idea!)",
       "isNerdy": true
     },
     {
       "text": "Yamcha's favourite software is Windows Vista",
       "isNerdy": true
     },
-    { 
+    {
       "text": "Yamcha's favourite Star Wars character is Jar Jar Binks",
       "isNerdy": true
     },
@@ -216,13 +222,7 @@
     }
   ],
   "extras": {
-    "pokemon": [
-      "ENTEI",
-      "MAGIKARP",
-      "PIKACHU",
-      "RAIKOU",
-      "SUICUNE"
-    ],
+    "pokemon": ["ENTEI", "MAGIKARP", "PIKACHU", "RAIKOU", "SUICUNE"],
     "socialnetwork": [
       "Facebook",
       "Instagram",
