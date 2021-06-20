@@ -1,12 +1,12 @@
-import { load } from 'ts-dotenv';
-import express from 'express';
 import axios from 'axios';
+import express from 'express';
+import { load } from 'ts-dotenv';
 
-import Provider from '../src/scripts/RandomQuoteProvider';
-import Dao from '../src/scripts/JSONFileQuoteDAO';
-import Factory from '../src/scripts/QuoteFactory';
 import data from '../src/scripts/data/data.json';
 import QuoteProvider from '../src/scripts/interfaces/QuoteProvider';
+import Dao from '../src/scripts/JSONFileQuoteDAO';
+import Factory from '../src/scripts/QuoteFactory';
+import Provider from '../src/scripts/RandomQuoteProvider';
 
 const { DISCORD_WEBHOOK_URL: webhook_url, WEBHOOK_SERVER_PORT: port } = load({
   DISCORD_WEBHOOK_URL: String,
