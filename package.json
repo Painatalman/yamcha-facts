@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "npm run compile-dev & npm run run-webhook-server",
-    "test": "jest --watch",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "compile": "webpack --env.NODE_ENV=production",
     "compile-dev": "webpack --env.NODE_ENV=development",
     "run-webhook-server": "ts-node webhook-server/index.ts"
