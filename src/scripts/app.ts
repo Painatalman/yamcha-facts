@@ -1,13 +1,13 @@
 import data from './data/data.json';
-import QuoteFactory from './QuoteFactory';
-import QuoteController from './QuoteController';
-import JSONFileQuoteDAO from './JSONFileQuoteDAO';
-import YamchaQuoteRenderer from './yamchaQuoteRenderer';
 import QuoteDTO from './interfaces/QuoteDTO.js';
+import JSONFileQuoteDAO from './JSONFileQuoteDAO';
+import QuoteController from './QuoteController';
+import QuoteFactory from './QuoteFactory';
+import TeleportSoundPlayer from './TeleportSoundPlayer';
+import validateAnchor from './validators/validateAnchor';
 import validateCheckbox from './validators/validateCheckbox';
 import validateElement from './validators/validateElement';
-import validateAnchor from './validators/validateAnchor';
-import TeleportSoundPlayer from './TeleportSoundPlayer';
+import YamchaQuoteRenderer from './yamchaQuoteRenderer';
 
 const SELECTORS = {
   QUOTE_EL_ID: 'quote',
@@ -64,7 +64,7 @@ const toggleNonNerdy = () => {
 };
 
 const toggleSound = () => {
-  const shouldPlaySound = !soundControl.checked;
+  const shouldPlaySound = soundControl.checked;
   quoteController.toggleSound(shouldPlaySound);
 };
 
